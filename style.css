@@ -1,0 +1,147 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+  color: #000;
+}
+
+/* Color Contrast */
+:focus {
+  outline: 2px solid orange;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+/* Aware of CSS Architecture such as BEM */
+.body--themed {
+  transition: all 0.15s ease-out;
+  background-color: #272C38;
+  color: blue;
+}
+
+.button {
+  background: none;
+  color: white;
+  border: none;
+}
+
+/* Using CSS and Body class we can change all the elements style.
+   Using a custom attribute creates a connection between our CSS and html
+   That means more than just CSS className
+*/
+.body--themed [data-theme="button"] {
+  color: gold;
+}
+
+.body--themed [data-theme="sidebar__ul"] {
+  background-color: blue;
+}
+
+.main {
+  margin-top: 58px;
+  overflow: hidden;
+}
+
+.navbar {
+  background-color: #1f2631;
+  border-top: 3px solid #0098ff;
+  display: flex;
+  height: 58px;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  /* transition: background .8s ease; */
+  width: 100%;
+  z-index: 999;
+}
+
+ul {
+  list-style: none;
+  align-items: center;
+  border-left: 1px solid hsla(0,0%,93%,.16);
+  display: inline-flex;
+  font-size: 1.3rem;
+  height: 30px;
+  margin-left: 20px;
+  padding-left: 7px;
+  text-transform: capitalize;
+  width: calc(100% - 104px);
+}
+
+.navbar-list {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    margin-left: 50px;
+    margin-right: 50px;
+    max-width: 1024px;
+    width: 100%;
+}
+
+.list {
+  letter-spacing: .01em;
+  padding: 13px;
+}
+
+.page-content {
+    min-height: 100vh;
+    padding: 2rem 2rem;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+}
+
+.sidebar {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: translate3d(-100%, 0, 0);
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  z-index: -1;
+}
+
+.sidebar--open {
+  transform: translate3d(0, 0, 0) !important;
+  z-index: -1;
+}
+
+.sidebar__ul, .sidebar__click-catcher {
+  flex: 1 1 auto;
+}
+
+.sidebar__ul {
+  background: rgba(111, 111, 111, 1);
+  padding: 8px;
+}
+
+.footer {
+    background: #11161d;
+    color: #7a858f;
+    margin-top: 20px;
+    min-height: 100px;
+    padding: 30px;
+    text-align: left;
+    width: 100%;
+}
+
+@media screen and (min-wdith: 768px) {
+  .sidebar__ul {
+    flex: 0 0 200px;
+  }
+}

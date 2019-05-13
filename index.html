@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Website Application</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="main">
+    <nav class="navbar">
+      <ul class="navbar-list">
+        <li class="list">
+          <a href="#">Home</a>
+        </li>
+        <li class="list">
+          <!-- Should take care of semantic markup, links are not buttons -->
+          <!-- Custom Attributes shows expereinces with scale -->
+          <button class="button" data-js="open-sidebar" data-theme="button">Open Sidebar</button>
+        </li>
+        <li class="list">
+          <!-- Should take care of semantic markup, links are not buttons -->
+          <!-- Custom Attributes shows expereinces with scale -->
+          <button class="button" data-js="theme-button" data-theme="button">Change Theme</button>
+        </li>
+      </ul>
+    </nav>
+    <aside class="sidebar" data-js="sidebar">
+      <ul class="sidebar__ul" data-theme="sidebar__ul">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+      </ul>
+      <div class="sidebar__click-catcher" data-js="sidebar-click-catcher"></div>
+    </aside>
+    <div class="page-content">
+      <h1>Hello World</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui doloribus alias corporis repellat iste dolores vero quia, enim! Quae aperiam, ab temporibus. Molestias rem deserunt accusantium incidunt quidem ullam omnis saepe distinctio atque provident, facere asperiores eligendi ab libero animi error quo enim sint amet eos nihil earum eum? Similique.</p>
+    </div>
+  <footer class="footer">
+      Stuff
+    </footer>
+  </main>
+  <script src="index.js"></script>
+
+  </script>
+</body>
+
+</html>
